@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <article>
+        <div class="article-info">
+            <h1>{{ post.title }}</h1>
+            <h2>{{ post.date }}</h2>
+            <h3>Last updated: {{ post.timestamp|date:"F j, Y" }}</h3>
+            <p>{{ post.description }}</p>
+        </div>
+        <div class="article-content">{{ post.rendered_content|safe }}</div>
+    </article>
+{% endblock content %}

@@ -366,6 +366,18 @@ files = [
 ]
 
 [[package]]
+name = "mistune"
+version = "2.0.4"
+description = "A sane Markdown parser with useful plugins and renderers"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "mistune-2.0.4-py2.py3-none-any.whl", hash = "sha256:182cc5ee6f8ed1b807de6b7bb50155df7b66495412836b9a74c8fbdfc75fe36d"},
+    {file = "mistune-2.0.4.tar.gz", hash = "sha256:9ee0a66053e2267aba772c71e06891fa8f1af6d4b01d5e84e267b4570d4d9808"},
+]
+
+[[package]]
 name = "multidict"
 version = "6.0.4"
 description = "multidict implementation"
@@ -488,6 +500,21 @@ files = [
 [package.extras]
 docs = ["furo (>=2022.12.7)", "proselint (>=0.13)", "sphinx (>=5.3)", "sphinx-autodoc-typehints (>=1.19.5)"]
 test = ["appdirs (==1.4.4)", "covdefaults (>=2.2.2)", "pytest (>=7.2)", "pytest-cov (>=4)", "pytest-mock (>=3.10)"]
+
+[[package]]
+name = "pygments"
+version = "2.14.0"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "Pygments-2.14.0-py3-none-any.whl", hash = "sha256:fa7bd7bd2771287c0de303af8bfdfc731f51bd2c6a47ab69d117138893b82717"},
+    {file = "Pygments-2.14.0.tar.gz", hash = "sha256:b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"},
+]
+
+[package.extras]
+plugins = ["importlib-metadata"]
 
 [[package]]
 name = "sqlparse"
@@ -616,4 +643,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10.9"
-content-hash = "171db802d8f27f3d62f1abcbc12dd1b50ce2ececdf1d197c612273137f0e803c"
+content-hash = "ab254db722c672c15d9a482887ecbd11bacda58bc44c2af6c738dc7c03a750bc"

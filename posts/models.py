@@ -15,17 +15,21 @@ class Post(models.Model):
         primary_key=True, unique=True, max_length=6, default=generate_id
     )
     title = models.CharField(max_length=100)
-    slug = models.SlugField(unique=False, max_length=100)
+    slug = models.SlugField(
+        unique=False,
+        max_length=100,
+        blank=True,
+    )
     date = models.DateField(max_length=25)
     publish_date = models.DateField(default=datetime.date.today())
     is_published = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now=True)
     description = models.CharField(max_length=500)
     content = models.TextField()
-    rendered_content = models.TextField()
+    rendered_content = models.TextField(blank=True)
 
     class Meta:
-        ordering = ["-publishDate"]
+        ordering = ["-publish_date"]
 
     def __str__(self):
         return self.title
