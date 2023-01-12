@@ -171,6 +171,25 @@ tests = ["attrs[tests-no-zope]", "zope.interface"]
 tests-no-zope = ["cloudpickle", "cloudpickle", "hypothesis", "hypothesis", "mypy (>=0.971,<0.990)", "mypy (>=0.971,<0.990)", "pympler", "pympler", "pytest (>=4.3.0)", "pytest (>=4.3.0)", "pytest-mypy-plugins", "pytest-mypy-plugins", "pytest-xdist[psutil]", "pytest-xdist[psutil]"]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.11.1"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+files = [
+    {file = "beautifulsoup4-4.11.1-py3-none-any.whl", hash = "sha256:58d5c3d29f5a36ffeb94f02f0d786cd53014cf9b3b3951d42e0080d8a9498d30"},
+    {file = "beautifulsoup4-4.11.1.tar.gz", hash = "sha256:ad9aa55b65ef2808eb405f46cf74df7fcb7044d5cbc26487f96eb2ef2e436693"},
+]
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
 name = "black"
 version = "22.12.0"
 description = "The uncompromising code formatter."
@@ -268,6 +287,22 @@ tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+
+[[package]]
+name = "django-pygmentify"
+version = "0.3.7"
+description = "A Django template tag to highlight code with Pygments"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-pygmentify-0.3.7.tar.gz", hash = "sha256:b0b705c12e488973469eb3d7587eaf3a0b0d105a0bd3f48277f1cf35ba0132af"},
+    {file = "django_pygmentify-0.3.7-py2.py3-none-any.whl", hash = "sha256:c5562728b8fa5ecc5e48514c98827562a8c10d4455f83934579487983e032467"},
+]
+
+[package.dependencies]
+beautifulsoup4 = "*"
+pygments = "*"
 
 [[package]]
 name = "frozenlist"
@@ -517,6 +552,18 @@ files = [
 plugins = ["importlib-metadata"]
 
 [[package]]
+name = "soupsieve"
+version = "2.3.2.post1"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "soupsieve-2.3.2.post1-py3-none-any.whl", hash = "sha256:3b2503d3c7084a42b1ebd08116e5f81aadfaea95863628c80a3b774a11b7c759"},
+    {file = "soupsieve-2.3.2.post1.tar.gz", hash = "sha256:fc53893b3da2c33de295667a0e19f078c14bf86544af307354de5fcf12a3f30d"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.4.3"
 description = "A non-validating SQL parser."
@@ -643,4 +690,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10.9"
-content-hash = "ab254db722c672c15d9a482887ecbd11bacda58bc44c2af6c738dc7c03a750bc"
+content-hash = "641b3ffd1989dd14aa42453815fb6429179fd74c6a8f4f3620e8374df5966ed1"

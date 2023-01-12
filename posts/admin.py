@@ -18,7 +18,12 @@ class HighlightRenderer(mistune.HTMLRenderer):
         if not info:
             return f"\n<pre><code>%s</code></pre>\n" % mistune.escape(code)
         lexer = get_lexer_by_name(info, stripall=True)
-        formatter = html.HtmlFormatter(style="colorful")
+        formatter = html.HtmlFormatter(
+            style=get_style_by_name("github-dark"),
+            linenos="table",
+            noclasses=True,
+            wrapcode=True,
+        )
         return highlight(code, lexer, formatter)
 
 
